@@ -1,0 +1,27 @@
+---
+description: MCP Skill - Mail - Mail service MCP with multi-tenant support
+globs:
+alwaysApply: false
+---
+
+# Mail MCP Skill
+
+**Server:** mail  
+**URL:** https://mcp.baisoln.com/mail/mcp  
+**Transport:** HTTP  
+**Multi-tenant:** Yes (tenant_id required)
+
+## When to use
+
+- Sending email (transactional, notifications, reports)
+- Managing mail configuration or templates per tenant
+- Any "send email" or "email delivery" task
+
+## Usage
+
+Reference this skill with `@mcp-skills/mail` when you need to send or manage email. Pass the correct `tenant_id` and use exact tool names from the MCP server.
+
+## Notes
+
+- Verify tool names in Cursor's MCP tool list; wrong names cause silent failures.
+- Use for tenant-scoped mail; do not hardcode credentials in code.

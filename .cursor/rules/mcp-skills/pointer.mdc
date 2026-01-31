@@ -1,0 +1,13 @@
+---
+description: MCP skills pointer - where to find skills, do not load until needed
+globs:
+alwaysApply: true
+---
+
+# MCP Skills (on-demand only)
+
+MCP server skills live in `.cursor/rules/mcp-skills/`. **Do not load any skill content into context unless the user or task clearly needs that MCP.**
+
+- To see the list: reference **@mcp-skills/index** (loads only when you reference it).
+- To use a specific MCP: reference **@mcp-skills/<server-name>** (e.g. @mcp-skills/postgres, @mcp-skills/context7) only when the task requires that server.
+- Use MCP tools only when a skill is referenced or the task explicitly needs that server; do not preload or assume which MCP to use.

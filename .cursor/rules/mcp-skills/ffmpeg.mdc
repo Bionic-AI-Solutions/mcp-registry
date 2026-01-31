@@ -1,0 +1,27 @@
+---
+description: MCP Skill - FFmpeg - Video/audio processing MCP
+globs:
+alwaysApply: false
+---
+
+# FFmpeg MCP Skill
+
+**Server:** ffmpeg  
+**URL:** https://mcp.baisoln.com/ffmpeg/mcp  
+**Transport:** HTTP
+
+## When to use
+
+- Transcoding, converting, or processing video or audio
+- Extracting streams, thumbnails, or metadata from media
+- Applying FFmpeg-based filters, codecs, or container formats
+- Any media manipulation that would normally use ffmpeg CLI
+
+## Usage
+
+Reference this skill with `@mcp-skills/ffmpeg` when you need video/audio processing. Use the exact tool names and parameters exposed by the FFmpeg MCP server.
+
+## Notes
+
+- Server exposes comprehensive FFmpeg capabilities; check available tools for your operation.
+- Prefer MCP tools over shell ffmpeg when running in Cursor/agent context for consistency.

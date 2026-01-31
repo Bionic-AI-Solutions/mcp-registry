@@ -1,0 +1,27 @@
+---
+description: MCP Skill - Docker Hub - Image search and management
+globs:
+alwaysApply: false
+---
+
+# Docker Hub MCP Skill
+
+**Server:** dockerhub  
+**Transport:** stdio (Docker run)  
+**Config:** HUB_PAT_TOKEN, username
+
+## When to use
+
+- Searching Docker Hub for official or community images
+- Checking image tags, descriptions, or pull counts
+- Deciding which image to use in Dockerfiles or docker-compose
+- Managing or inspecting Docker Hub repositories (when tools support it)
+
+## Usage
+
+Reference this skill with `@mcp-skills/dockerhub` when you need to find or validate Docker images. Use the MCP tools instead of manual browser search.
+
+## Notes
+
+- Server runs via `docker run ... mcp/dockerhub` with PAT and username.
+- Use for image discovery and selection; image builds stay in your Dockerfile.

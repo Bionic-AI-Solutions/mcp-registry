@@ -1,0 +1,30 @@
+---
+description: Claude Skills Index - On-demand coding and workflow skills
+globs:
+alwaysApply: false
+---
+
+# Claude Skills Index
+
+On-demand skills for coding, review, and workflow. Reference a skill with `@claude-skills/<name>` when the task needs it.
+
+## Available skills
+
+| Skill           | Reference                      | Use for                                                     |
+| --------------- | ------------------------------ | ----------------------------------------------------------- |
+| code-review     | @claude-skills/code-review     | Reviewing code, finding issues, suggesting improvements     |
+| refactor        | @claude-skills/refactor        | Safe refactoring, reducing duplication, improving structure |
+| testing         | @claude-skills/testing         | Unit tests, integration tests, mocks, coverage              |
+| documentation   | @claude-skills/documentation   | README, API docs, inline docs, usage guides                 |
+| debugging       | @claude-skills/debugging       | Reproducing bugs, root cause, fix strategies                |
+| security-review | @claude-skills/security-review | Security scanning, OWASP, secrets, hardening                |
+| performance     | @claude-skills/performance     | Profiling, optimization, async, scaling                     |
+| api-design      | @claude-skills/api-design      | REST/OpenAPI design, versioning, error handling             |
+
+## Usage
+
+- **Single skill:** Use `@claude-skills/<skill-name>` (e.g. `@claude-skills/testing`) when the task needs that approach.
+- **This index:** Use `@claude-skills/index` to see the list and pick a skill.
+- **BMAD:** For full workflows (PRD, architecture, sprints), use @bmad/ agents and workflows; Claude skills are focused, single-purpose rules.
+
+All skills are manual (alwaysApply: false). Reference them explicitly when needed.

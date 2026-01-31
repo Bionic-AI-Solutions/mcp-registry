@@ -1,0 +1,23 @@
+---
+description: Claude Skill - Security review
+globs:
+alwaysApply: false
+---
+
+# Security Review Skill
+
+Reference with **@claude-skills/security-review** when doing security-focused review or hardening.
+
+## When to use
+
+- User asks for security review, vulnerability check, or hardening
+- Reviewing auth, secrets, input validation, or sensitive data handling
+- Checking for common issues (injection, XSS, insecure config, exposed secrets)
+
+## Principles
+
+- Check authn/authz, input validation, and output encoding
+- Ensure secrets and tokens are not hardcoded or logged; use env/config
+- Prefer parameterized queries and safe APIs (e.g. ORM, validated inputs)
+- Align with project tools (e.g. Bandit for Python); call out severity and fix priority
+- For full test-architecture security workflow use @bmad testarch workflows when appropriate

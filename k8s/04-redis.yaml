@@ -1,0 +1,59 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mcp-redis
+  namespace: mcp-registry
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mcp-redis
+  template:
+    metadata:
+      labels:
+        app: mcp-redis
+    spec:
+      containers:
+      - name: redis
+        image: redis:7-alpine
+        command:
+        - redis-server
+        - --requirepass
+        - $(REDIS_PASSWORD)
+        - --maxmemory
+        - "256mb"
+        - --maxmemory-policy
+        - "allkeys-lru"
+        ports:
+        - containerPort: 6379
+        env:
+        - name: REDIS_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mcp-registry-secrets
+              key: REDIS_URL
+          # Parse from URL in init container or use separate secret in production
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "100m"
+          limits:
+            memory: "256Mi"
+            cpu: "200m"
+        livenessProbe:
+          tcpSocket:
+            port: 6379
+          initialDelaySeconds: 30
+          periodSeconds: 10
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mcp-redis
+  namespace: mcp-registry
+spec:
+  selector:
+    app: mcp-redis
+  ports:
+  - port: 6379
+    targetPort: 6379

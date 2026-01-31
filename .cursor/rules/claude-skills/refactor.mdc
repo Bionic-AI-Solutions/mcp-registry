@@ -1,0 +1,23 @@
+---
+description: Claude Skill - Refactoring
+globs:
+alwaysApply: false
+---
+
+# Refactor Skill
+
+Reference with **@claude-skills/refactor** when refactoring code or reducing duplication.
+
+## When to use
+
+- User asks to refactor, simplify, or clean up code
+- Reducing duplication (DRY), improving structure, or renaming for clarity
+- Extracting functions/classes or reorganizing without changing behavior
+
+## Principles
+
+- Preserve behavior; keep or add tests so refactors are safe
+- Small, incremental steps where possible
+- Follow existing project structure and naming
+- Remove dead code and unused imports as you go
+- Avoid refactoring and feature changes in the same edit unless asked

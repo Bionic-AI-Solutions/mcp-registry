@@ -1,0 +1,26 @@
+---
+description: MCP Skill - GPU AI - AskCollections AI/GPU capabilities
+globs:
+alwaysApply: false
+---
+
+# GPU AI MCP Skill
+
+**Server:** gpu-ai  
+**URL:** http://api.askcollections.com/mcp/sse  
+**Transport:** SSE
+
+## When to use
+
+- Needing GPU or AI-related operations exposed by AskCollections
+- Querying or using AI/ML capabilities provided by this MCP
+- Tasks that require tools from the gpu-ai server (check available tools in Cursor)
+
+## Usage
+
+Reference this skill with `@mcp-skills/gpu-ai` when the task involves AI or GPU features provided by this server. Verify tool names in Cursor's MCP tool list before calling.
+
+## Notes
+
+- Transport is SSE; ensure Cursor MCP is connected before relying on tools.
+- Tool names and parameters are defined by the server—use exact names.

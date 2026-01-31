@@ -1,0 +1,34 @@
+---
+description: MCP Skill - Postgres - PostgreSQL MCP with multi-tenant support
+globs:
+alwaysApply: false
+---
+
+# Postgres MCP Skill
+
+**Server:** postgres  
+**URL:** https://mcp.baisoln.com/postgres/mcp  
+**Transport:** HTTP  
+**Multi-tenant:** Yes (tenant_id required)
+
+## When to use
+
+- Running SQL queries (SELECT, INSERT, UPDATE, DELETE, DDL)
+- Listing or describing tables for a tenant database
+- Inspecting schema or debugging data issues
+- Any database operation that should use the Postgres MCP
+
+## Tool naming (DO NOT GUESS)
+
+- **Prefix:** `pg_*`
+- **Examples:** `pg_execute_query`, `pg_list_tables`, `pg_describe_table`
+- **Wrong:** `execute_query`, `postgres_execute_query`, `postgres_query`
+
+## Usage
+
+Reference this skill with `@mcp-skills/postgres` when you need to query or manage PostgreSQL. Always pass the correct `tenant_id` and use exact tool names from the MCP server. Verify tool names in `~/.cursor/mcp.json` or Cursor's MCP tool list.
+
+## Notes
+
+- Wrong tool names cause silent failures; agent may report success but no data is saved.
+- Per project rules: verify tool names before coding; test that data is actually written/read.

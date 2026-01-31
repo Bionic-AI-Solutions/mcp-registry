@@ -1,0 +1,90 @@
+{
+  "mcpServers": {
+    "livekit-docs": {
+      "type": "http",
+      "url": "https://docs.livekit.io/mcp"
+    },
+    "context7": {
+      "type": "http",
+      "url": "https://mcp.context7.com/mcp",
+      "headers": {
+        "CONTEXT7_API_KEY": "${CONTEXT7_API_KEY}"
+      }
+    },
+    "dockerhub": {
+      "type": "stdio",
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-e",
+        "HUB_PAT_TOKEN=${HUB_PAT_TOKEN}",
+        "mcp/dockerhub@sha256:3d4383a638c79329dd67a7039c475827f2ebe87349743bd4dfe32d8d099cf3bb",
+        "--transport=stdio",
+        "--username=${DOCKERHUB_USERNAME:-docker4zerocool}"
+      ]
+    },
+    "gpu-ai": {
+      "type": "sse",
+      "url": "http://api.askcollections.com/mcp/sse"
+    },
+    "calculator": {
+      "type": "http",
+      "url": "https://mcp.baisoln.com/calculator/mcp"
+    },
+    "postgres": {
+      "type": "http",
+      "url": "https://mcp.baisoln.com/postgres/mcp"
+    },
+    "minio": {
+      "type": "http",
+      "url": "https://mcp.baisoln.com/minio/mcp"
+    },
+    "pdf-generator": {
+      "type": "http",
+      "url": "https://mcp.baisoln.com/pdf-generator/mcp"
+    },
+    "ffmpeg": {
+      "type": "http",
+      "url": "https://mcp.baisoln.com/ffmpeg/mcp"
+    },
+    "mail": {
+      "type": "http",
+      "url": "https://mcp.baisoln.com/mail/mcp"
+    },
+    "archon": {
+      "type": "http",
+      "url": "http://192.168.0.10:8051/mcp"
+    },
+    "openproject": {
+      "type": "http",
+      "url": "https://mcp.baisoln.com/openproject/mcp"
+    },
+    "meilisearch": {
+      "type": "http",
+      "url": "https://mcp.baisoln.com/meilisearch/mcp"
+    },
+    "genimage": {
+      "type": "http",
+      "url": "https://mcp.baisoln.com/genimage/mcp"
+    },
+    "figma": {
+      "type": "http",
+      "url": "https://mcp.figma.com/mcp",
+      "headers": {}
+    },
+    "n8n-mcp": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "n8n-mcp"],
+      "env": {
+        "MCP_MODE": "stdio",
+        "LOG_LEVEL": "error",
+        "DISABLE_CONSOLE_OUTPUT": "true",
+        "N8N_API_URL": "${N8N_API_URL}",
+        "N8N_API_KEY": "${N8N_API_KEY}"
+      }
+    }
+  }
+}

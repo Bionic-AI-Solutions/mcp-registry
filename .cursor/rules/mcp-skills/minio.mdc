@@ -1,0 +1,33 @@
+---
+description: MCP Skill - MinIO - S3-compatible object storage MCP
+globs:
+alwaysApply: false
+---
+
+# MinIO MCP Skill
+
+**Server:** minio  
+**URL:** https://mcp.baisoln.com/minio/mcp  
+**Transport:** HTTP  
+**Multi-tenant:** Yes (tenant_id required)
+
+## When to use
+
+- Uploading, downloading, or listing objects in S3-compatible storage
+- Managing buckets or object metadata per tenant
+- Storing files, artifacts, or blobs that need tenant isolation
+
+## Tool naming (DO NOT GUESS)
+
+- **Prefix:** `minio_*`
+- **Examples:** `minio_upload_object`, `minio_list_buckets`, `minio_get_object`
+- **Wrong:** `upload_object`, `s3_upload`, `minio_upload`
+
+## Usage
+
+Reference this skill with `@mcp-skills/minio` when you need object storage. Always pass the correct `tenant_id` and use exact tool names from the MCP server.
+
+## Notes
+
+- Verify tool names before coding; wrong names cause silent failures.
+- MinIO is S3-compatible; bucket and key semantics follow S3.

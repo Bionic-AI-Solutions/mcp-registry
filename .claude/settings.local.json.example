@@ -1,0 +1,9 @@
+{
+  "env": {
+    "CONTEXT7_API_KEY": "your-context7-api-key",
+    "HUB_PAT_TOKEN": "your-docker-hub-pat-token",
+    "DOCKERHUB_USERNAME": "your-dockerhub-username",
+    "N8N_API_URL": "https://your-n8n-instance.example.com/",
+    "N8N_API_KEY": "your-n8n-api-key"
+  }
+}

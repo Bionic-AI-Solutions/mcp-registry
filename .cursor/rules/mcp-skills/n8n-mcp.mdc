@@ -1,0 +1,27 @@
+---
+description: MCP Skill - n8n - n8n workflow automation
+globs:
+alwaysApply: false
+---
+
+# n8n MCP Skill
+
+**Server:** n8n-mcp  
+**Transport:** stdio (npx -y n8n-mcp)  
+**Config:** N8N_API_URL, N8N_API_KEY (env)
+
+## When to use
+
+- Triggering or querying n8n workflows from Cursor/agent
+- Listing workflows, executions, or nodes
+- Integrating n8n automation into development or ops tasks
+- Any "run n8n workflow" or "check n8n execution" task
+
+## Usage
+
+Reference this skill with `@mcp-skills/n8n-mcp` when you need to interact with n8n. Use exact tool names from the MCP server; API URL and key are set in Cursor MCP env.
+
+## Notes
+
+- Server runs via npx; ensure Node/npx available where Cursor runs.
+- Do not hardcode N8N_API_KEY in project code; keep in MCP env only.

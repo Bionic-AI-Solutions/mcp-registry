@@ -1,0 +1,22 @@
+---
+description: Claude Skill - Documentation
+globs:
+alwaysApply: false
+---
+
+# Documentation Skill
+
+Reference with **@claude-skills/documentation** when writing or updating docs.
+
+## When to use
+
+- User asks for README, API docs, usage guide, or inline documentation
+- Documenting new features, APIs, or setup steps
+- Keeping docs in sync with code (e.g. after refactors)
+
+## Principles
+
+- Match project style (e.g. feature docs in docs/feature/<name>/)
+- Include prerequisites, setup, examples, and troubleshooting where relevant
+- For API docs: endpoints, params, responses, errors; OpenAPI/Swagger if used
+- Do not create docs proactively unless asked; update existing docs when code changes and user expects it

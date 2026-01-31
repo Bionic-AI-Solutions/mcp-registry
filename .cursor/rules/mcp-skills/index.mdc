@@ -1,0 +1,44 @@
+---
+description: MCP Skills Index - All active MCP server skills in Cursor
+globs:
+alwaysApply: false
+---
+
+# MCP Skills Index
+
+Claude skills for each MCP server configured in `~/.cursor/mcp.json`. Reference a skill with `@mcp-skills/<name>` when you need that server's tools.
+
+## Active MCP servers and skills
+
+| Server        | Skill reference           | Use for                                     |
+| ------------- | ------------------------- | ------------------------------------------- |
+| livekit-docs  | @mcp-skills/livekit-docs  | LiveKit SDK / real-time docs                |
+| context7      | @mcp-skills/context7      | Library/framework documentation             |
+| dockerhub     | @mcp-skills/dockerhub     | Docker image search / management            |
+| gpu-ai        | @mcp-skills/gpu-ai        | GPU / AI (AskCollections)                   |
+| calculator    | @mcp-skills/calculator    | Math expressions                            |
+| postgres      | @mcp-skills/postgres      | PostgreSQL (multi-tenant, pg\_\* tools)     |
+| minio         | @mcp-skills/minio         | MinIO / S3 object storage (minio\_\* tools) |
+| pdf-generator | @mcp-skills/pdf-generator | PDF generation (pdf\_\* tools)              |
+| ffmpeg        | @mcp-skills/ffmpeg        | Video/audio processing                      |
+| mail          | @mcp-skills/mail          | Mail service (multi-tenant)                 |
+| archon        | @mcp-skills/archon        | External knowledge search only              |
+| openproject   | @mcp-skills/openproject   | Work management & document storage          |
+| meilisearch   | @mcp-skills/meilisearch   | Search engine (multi-tenant)                |
+| genimage      | @mcp-skills/genimage      | AI image generation (Runware)               |
+| figma         | @mcp-skills/figma         | Figma design / file access                  |
+| n8n-mcp       | @mcp-skills/n8n-mcp       | n8n workflow automation                     |
+
+## Usage
+
+- **Single server:** Use `@mcp-skills/<server-name>` (e.g. `@mcp-skills/postgres`) so the agent knows to use that MCP and its tool naming.
+- **This index:** Use `@mcp-skills/index` to load this list and pick the right server.
+- **Tool names:** Do not guess tool names. For postgres use `pg_*`, for minio use `minio_*`, for pdf use `pdf_*`; for others check Cursor's MCP tool list or run the project's MCP tool listing script if available.
+
+## BMAD overlap
+
+- **Archon:** Also @bmad/integrations/archon (external search only).
+- **OpenProject:** Also @bmad/integrations/openproject (work management).
+- **GenImage:** Also @bmad/integrations/genimage (image generation workflows).
+
+These skills are manual (alwaysApply: false). Reference them explicitly when you need a specific MCP server.

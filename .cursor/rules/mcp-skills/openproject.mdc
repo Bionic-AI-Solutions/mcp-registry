@@ -1,0 +1,28 @@
+---
+description: MCP Skill - OpenProject - Work management and document storage
+globs:
+alwaysApply: false
+---
+
+# OpenProject MCP Skill
+
+**Server:** openproject  
+**URL:** https://mcp.baisoln.com/openproject/mcp  
+**Transport:** HTTP  
+**Multi-tenant:** Yes (tenant_id required)
+
+## When to use
+
+- Creating or updating work packages, tasks, stories, epics
+- Storing or retrieving project documents in OpenProject
+- Querying project status, assignees, or timelines
+- Any work management or document storage that should live in OpenProject
+
+## Usage
+
+Reference this skill with `@mcp-skills/openproject` when you need work management or document storage. For BMAD workflows, also use @bmad/integrations/openproject. Pass the correct `tenant_id` and use exact tool names from the MCP server.
+
+## Notes
+
+- Use OpenProject for ALL work management and document storage when the project uses it.
+- Verify tool names before coding; wrong names cause silent failures.

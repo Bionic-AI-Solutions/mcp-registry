@@ -43,6 +43,9 @@ temp/
 *.tmp
 
 
+# Claude Code local settings (MCP env vars, secrets)
+.claude/settings.local.json
+
 # BMAD generated output
 _bmad-output/
 

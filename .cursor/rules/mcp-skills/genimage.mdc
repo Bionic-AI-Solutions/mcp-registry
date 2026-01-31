@@ -1,0 +1,26 @@
+---
+description: MCP Skill - GenImage - AI image generation (Runware API)
+globs:
+alwaysApply: false
+---
+
+# GenImage MCP Skill
+
+**Server:** genimage  
+**URL:** https://mcp.baisoln.com/genimage/mcp  
+**Transport:** HTTP
+
+## When to use
+
+- Generating images from text prompts (AI image generation)
+- Using Runware API for image creation or editing
+- Any "generate an image" or "create image from prompt" task
+
+## Usage
+
+Reference this skill with `@mcp-skills/genimage` when you need AI-generated images. For BMAD workflows (e.g. wireframes, diagrams), also use @bmad/integrations/genimage. Use exact tool names from the MCP server.
+
+## Notes
+
+- Remote access via Kong proxy; tool names are defined by the server.
+- Verify tool names and parameters before deploying; wrong names cause silent failures.

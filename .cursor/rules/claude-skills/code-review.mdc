@@ -1,0 +1,23 @@
+---
+description: Claude Skill - Code review
+globs:
+alwaysApply: false
+---
+
+# Code Review Skill
+
+Reference with **@claude-skills/code-review** when reviewing code or when the user asks for a review.
+
+## When to use
+
+- User asks for code review or "review this PR/code"
+- Checking code before merge or suggesting improvements
+- Finding bugs, style issues, security or performance concerns
+
+## Principles
+
+- Focus on correctness, clarity, security, and maintainability
+- Prefer project conventions (linters, formatters, existing patterns)
+- Call out specific lines/files; suggest concrete changes
+- Distinguish must-fix vs nice-to-have
+- For full workflow use @bmad/bmm/workflows/code-review when appropriate

@@ -1,0 +1,26 @@
+---
+description: MCP Skill - LiveKit Docs - LiveKit SDK and real-time docs
+globs:
+alwaysApply: false
+---
+
+# LiveKit MCP Skill
+
+**Server:** livekit-docs  
+**URL:** https://docs.livekit.io/mcp
+
+## When to use
+
+- Building or debugging real-time audio/video apps with LiveKit
+- Looking up LiveKit SDK APIs, WebRTC, agents, or room/participant APIs
+- Implementing live streaming, recording, or egress with LiveKit
+- Integrating LiveKit with React, Flutter, or server SDKs
+
+## Usage
+
+Reference this skill with `@mcp-skills/livekit-docs` when you need authoritative LiveKit documentation. Use the LiveKit MCP tools to query docs instead of guessing APIs.
+
+## Notes
+
+- Prefer querying LiveKit docs via this MCP for current API behavior and examples.
+- Use for both client and server LiveKit usage.

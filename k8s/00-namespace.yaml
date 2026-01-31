@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: mcp-registry
+  labels:
+    app: mcp-registry
+    istio-injection: enabled  # If using Istio

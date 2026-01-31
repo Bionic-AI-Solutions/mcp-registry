@@ -1,0 +1,26 @@
+---
+description: MCP Skill - Figma - Figma design and file access
+globs:
+alwaysApply: false
+---
+
+# Figma MCP Skill
+
+**Server:** figma  
+**URL:** https://mcp.figma.com/mcp
+
+## When to use
+
+- Reading or inspecting Figma files, frames, or components
+- Extracting design tokens, assets, or layout data from Figma
+- Syncing design specs with code or documentation
+- Any task that requires "get data from Figma" or "read Figma file"
+
+## Usage
+
+Reference this skill with `@mcp-skills/figma` when you need to access Figma designs. Use the exact tool names and parameters exposed by the Figma MCP server; authentication/headers are configured in Cursor.
+
+## Notes
+
+- Server is official Figma MCP; tool names and params follow Figma's API.
+- Use for design-to-code or design documentation workflows.

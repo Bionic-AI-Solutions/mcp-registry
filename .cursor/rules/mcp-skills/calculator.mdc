@@ -1,0 +1,26 @@
+---
+description: MCP Skill - Calculator - Remote calculator MCP via Kong
+globs:
+alwaysApply: false
+---
+
+# Calculator MCP Skill
+
+**Server:** calculator  
+**URL:** https://mcp.baisoln.com/calculator/mcp  
+**Transport:** HTTP
+
+## When to use
+
+- Evaluating math expressions (arithmetic, scientific) from natural language or code
+- Doing one-off calculations without writing code
+- Validating numeric results or formulas
+
+## Usage
+
+Reference this skill with `@mcp-skills/calculator` when you need to compute expressions. Use the calculator MCP tools with the exact tool names exposed by the server.
+
+## Notes
+
+- Remote access via Kong proxy; no tenant_id required for this server.
+- Prefer MCP calculator for consistency over inline eval in unknown environments.

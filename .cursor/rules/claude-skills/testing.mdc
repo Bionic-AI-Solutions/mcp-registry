@@ -1,0 +1,23 @@
+---
+description: Claude Skill - Testing
+globs:
+alwaysApply: false
+---
+
+# Testing Skill
+
+Reference with **@claude-skills/testing** when writing or updating tests.
+
+## When to use
+
+- User asks for tests, unit tests, or integration tests
+- Adding tests for new or changed behavior
+- Fixing or extending existing test suites
+
+## Principles
+
+- **Unit tests:** Use mocks for external deps; keep tests fast and isolated
+- **Integration tests:** Use live services per project rules (ENV=test, check_services)
+- Place unit tests in `tests/unit/`, integration in `tests/integration` (or project equivalent)
+- Prefer pytest for Python; follow project patterns (fixtures, parametrize)
+- Run full unit suite before suggesting completion; ensure no redundant or obsolete tests

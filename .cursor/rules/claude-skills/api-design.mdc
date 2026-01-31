@@ -1,0 +1,23 @@
+---
+description: Claude Skill - API design
+globs:
+alwaysApply: false
+---
+
+# API Design Skill
+
+Reference with **@claude-skills/api-design** when designing or reviewing APIs.
+
+## When to use
+
+- User asks to design or review REST/HTTP APIs, request/response shape, or versioning
+- Defining endpoints, status codes, errors, and contracts
+- Aligning with OpenAPI/Swagger or project API conventions
+
+## Principles
+
+- Use standard HTTP methods and status codes; 422 for validation, 404 for missing resource, etc.
+- Consistent error shape (e.g. code, message, details); use ValidationResult.raise_if_invalid() where applicable
+- Version via URL path or header per project; avoid breaking changes without versioning
+- Document endpoints, params, and responses; keep OpenAPI in sync if used
+- Consider pagination, filtering, and rate limiting for list and heavy endpoints

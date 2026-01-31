@@ -1,0 +1,23 @@
+---
+description: Claude Skill - Debugging
+globs:
+alwaysApply: false
+---
+
+# Debugging Skill
+
+Reference with **@claude-skills/debugging** when debugging failures or unexpected behavior.
+
+## When to use
+
+- User reports a bug, error, or "it doesn't work"
+- Reproducing and isolating the cause of a failure
+- Proposing a fix and verifying it doesn't regress
+
+## Principles
+
+- Reproduce first: steps, env, inputs, and exact error/output
+- Narrow scope: identify minimal repro and likely layer (code, config, infra, data)
+- Propose a targeted fix with a brief rationale; suggest tests or checks to confirm
+- Prefer project patterns (logging, error handling, ValidationResult.raise_if_invalid() where applicable)
+- Only catch unexpected/system errors as 500s; let validation errors surface with correct status codes

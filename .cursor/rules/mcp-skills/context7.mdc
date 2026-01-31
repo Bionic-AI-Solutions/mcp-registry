@@ -1,0 +1,27 @@
+---
+description: MCP Skill - Context7 - Library and framework documentation search
+globs:
+alwaysApply: false
+---
+
+# Context7 MCP Skill
+
+**Server:** context7  
+**URL:** https://mcp.context7.com/mcp  
+**Auth:** CONTEXT7_API_KEY (headers)
+
+## When to use
+
+- Looking up latest docs for libraries, frameworks, or languages
+- Verifying API signatures, config options, or migration guides
+- Researching best practices or official examples before implementing
+- Resolving "how does X work in library Y?" questions
+
+## Usage
+
+Reference this skill with `@mcp-skills/context7` when you need up-to-date documentation. Prefer Context7 over generic web search for technical, library-specific questions.
+
+## Notes
+
+- Use for framework docs (React, FastAPI, SQLAlchemy, etc.) and language references.
+- Per project rules: use indexed docs first, then Context7, then web.

@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mcp-registry-config
+  namespace: mcp-registry
+data:
+  APP_ENV: "production"
+  LOG_LEVEL: "INFO"
+  DB_POOL_SIZE: "20"
+  DB_MAX_OVERFLOW: "30"
+  DB_ECHO: "false"
+  REDIS_POOL_SIZE: "50"
+  RATE_LIMIT_ENABLED: "true"
+  RATE_LIMIT_DEFAULT: "1000/minute"
+  RATE_LIMIT_BURST: "50"
+  LANGFUSE_ENABLED: "true"
+  LANGFUSE_HOST: "https://cloud.langfuse.com"
+  CORS_ORIGINS: "*"
+  ALLOWED_HOSTS: "*"
+  AUDIT_LOG_TO_STDOUT: "true"

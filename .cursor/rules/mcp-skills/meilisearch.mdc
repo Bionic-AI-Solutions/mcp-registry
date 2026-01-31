@@ -1,0 +1,28 @@
+---
+description: MCP Skill - Meilisearch - Search engine MCP with multi-tenant support
+globs:
+alwaysApply: false
+---
+
+# Meilisearch MCP Skill
+
+**Server:** meilisearch  
+**URL:** https://mcp.baisoln.com/meilisearch/mcp  
+**Transport:** HTTP  
+**Multi-tenant:** Yes (tenant_id required)
+
+## When to use
+
+- Indexing documents or records for full-text search
+- Running search queries, faceted search, or typo tolerance
+- Managing indexes, ranking rules, or stop words per tenant
+- Building search UX or backend search APIs backed by Meilisearch
+
+## Usage
+
+Reference this skill with `@mcp-skills/meilisearch` when you need search indexing or querying. Pass the correct `tenant_id` and use exact tool names from the MCP server.
+
+## Notes
+
+- Verify tool names in Cursor's MCP tool list; wrong names cause silent failures.
+- Meilisearch is tenant-aware via this MCP; use for multi-tenant search scenarios.

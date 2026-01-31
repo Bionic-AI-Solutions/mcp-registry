@@ -1,0 +1,31 @@
+---
+description: MCP Skill - PDF Generator - PDF generation MCP via Kong
+globs:
+alwaysApply: false
+---
+
+# PDF Generator MCP Skill
+
+**Server:** pdf-generator  
+**URL:** https://mcp.baisoln.com/pdf-generator/mcp  
+**Transport:** HTTP
+
+## When to use
+
+- Generating PDFs from HTML, text, or templates
+- Fetching or downloading generated PDF files
+- Any task that requires "create PDF" or "get PDF file"
+
+## Tool naming (DO NOT GUESS)
+
+- **Prefix:** `pdf_*`
+- **Examples:** `pdf_generate_pdf`, `pdf_get_pdf_file`
+- **Wrong:** `generate_pdf`, `create_pdf`, `get_pdf`
+
+## Usage
+
+Reference this skill with `@mcp-skills/pdf-generator` when you need to produce or retrieve PDFs. Use exact tool names from the MCP server; verify in Cursor's MCP tool list.
+
+## Notes
+
+- Wrong tool names cause silent failures. Confirm tool names and parameters before deploying.

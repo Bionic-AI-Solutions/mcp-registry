@@ -1,0 +1,26 @@
+---
+description: MCP Skill - Archon - External knowledge search
+globs:
+alwaysApply: false
+---
+
+# Archon MCP Skill
+
+**Server:** archon  
+**URL:** http://192.168.0.10:8051/mcp  
+**Transport:** HTTP
+
+## When to use
+
+- Searching external knowledge bases or indexed content outside this repo
+- Research or "find information about X" when the source is not project docs
+- **CRITICAL:** Archon is for EXTERNAL knowledge search ONLY—do NOT store project documents here
+
+## Usage
+
+Reference this skill with `@mcp-skills/archon` when you need to query external knowledge. For BMAD workflows, also use @bmad/integrations/archon.
+
+## Notes
+
+- Do not use Archon for project-internal docs; use indexed docs or Context7 for libraries.
+- Tool names and parameters are defined by the server; use exact names from the MCP tool list.

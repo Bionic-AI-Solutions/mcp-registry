@@ -1,0 +1,23 @@
+---
+description: Claude Skill - Performance
+globs:
+alwaysApply: false
+---
+
+# Performance Skill
+
+Reference with **@claude-skills/performance** when optimizing or analyzing performance.
+
+## When to use
+
+- User reports slowness or asks for optimization
+- Improving throughput, latency, or resource use
+- Designing for scale (async, pooling, caching, batching)
+
+## Principles
+
+- Measure or reason about bottlenecks before changing code (profiling, metrics, N+1, etc.)
+- Prefer async and connection pooling for I/O-bound work; align with project patterns
+- Use caching (e.g. Redis) where appropriate; respect cache invalidation
+- Keep DB queries minimal and indexed; avoid N+1 and large unbounded results
+- Document trade-offs (e.g. memory vs CPU, consistency vs speed) when relevant

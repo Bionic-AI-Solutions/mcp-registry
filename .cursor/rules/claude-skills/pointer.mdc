@@ -1,0 +1,13 @@
+---
+description: Claude skills pointer - where to find skills, do not load until needed
+globs:
+alwaysApply: true
+---
+
+# Claude Skills (on-demand only)
+
+Claude coding and workflow skills live in `.cursor/rules/claude-skills/`. **Do not load any skill content into context unless the user or task clearly needs that skill.**
+
+- To see the list: reference **@claude-skills/index** (loads only when you reference it).
+- To use a specific skill: reference **@claude-skills/<skill-name>** (e.g. @claude-skills/code-review, @claude-skills/testing) only when the task requires that approach.
+- Apply a skill only when it is referenced or the task explicitly calls for it; do not preload or assume which skill to use.
